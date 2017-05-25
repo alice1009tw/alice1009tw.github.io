@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>網頁版面設計</title>
+<style type="text/css">
+  html{height:100%;} /* 頁面的高度設置 */
+* html body{height:100%;}
+body{
+margin:0;
+  padding:0;
+  min-height:100%; /* 瀏覽器的視窗大小改變時顯示處理 */
+  position:relative; /* 相對的位置 */
+}
+div.topNav{
+  background-color:black;
+  color: white;
+  height:80px;
+  font-size:70px;
+}
+div.header{
+  background-color:silver;
+  height:40px; /* 高度的設置 */
+  position: relative;
+  right: 0px;
+}
+div.wrapper{
+margin:0 5%; /* 左右0 離 5% 版面置中 */
+}
+div.content{
+  overflow: hidden; /* 元素超出矩形格時或說重疊 */
+  background-color:white;
+  
+}
+div.leftNav{
+  width:200px; max-width:36%; /* 瀏覽按鈕區域的寬度 */
+margin:0px -20px 0px -70px;
+  float:left; /* 元素設為在左側浮動 */
+}
+c{
+  position: relative;
+  right: 19px;
+}
+footer{
+  clear:both;
+  width:100%;
+  position:relative;
+  bottom:0; /* 設置位置於下方 */
+  height:80px;
+  background-color:silver;
+}
+span{
+  position: relative;
+  left: 580px;
+  bottom: -15px;
+}
+h2{
+  position: relative;
+  left: 330px;
+}
+#w3-contaner{
+  
+}
+#UA{
+height:110px;
+background: -webkit-linear-gradient(90deg,black,white);
+background: -o-linear-gradient(90deg,black,white);
+background: -moz-linear-gradient(90deg,black,white);
+background: linear-gradient(90deg,black,white);
+}
+#img{
+  size:10px;
+}
+</style>
+</head>
+
+<!--css部分-->
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--css部分-->
+
+<body>
+
+
+<div class="header w3-bar w3-light-grey w3-border">
+  <a href="#" class="w3-bar-item w3-button w3-grey"><i class="fa fa-home"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i></a>
+   <!--(2)-->
+</div>
+
+<div class="topNav"  id="UA">
+  Beauty X Beast <!--(1)-->  
+
+</div>
+
+
+<div class="wrapper">
+
+
+
+<div class="leftNav">
+     <!--Sidebar Overlay部分-->
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button">Develope Team</a>
+  <a href="#" class="w3-bar-item w3-button">Log In</a>
+  <a href="#" class="w3-bar-item w3-button">Setting</a>
+  <img src="http://img.lanimg.com/tu/tuku/130220/234625-1302201G42780.jpg" style="width: 120px; position: relative;bottom: -170px; right: -75px">
+</div>
+
+<!-- Page Content -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div>
+  <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h1>
+    
+     </h1>
+    <p></p>
+  </div>
+ </div>
+        <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+        </script>
+</div>
+<!--Sidebar Overlay部分-->
+<!--(3)-->
+    
+
+    <div class="content">
+     <!--(4 Content)-->
+      <h2><marquee align="left" scrollamount="12" bgcolor="white" behavior="slide">These are the shoes we sell!!</marquee></h2>
+
+      <!--Slider部分-->
+<div class="w3-content w3-section" style="max-width:700px">
+  <img class="mySlides w3-animate-fading" src="https://3.bp.blogspot.com/-uL6R-hzJf78/VxZaEAw4ZrI/AAAAAAAAFI0/bYsLhkP4ELM4MCdCWc4t9MHZIc_My_BUQCLcB/s1600/tumblr_nuor6my6QF1spnyg9o1_500.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="https://scontent.xx.fbcdn.net/v/t1.0-9/18519993_1787441721272660_7932245439200973516_n.jpg?oh=a873852b086391cb0e8c1d595e7936f8&oe=59BE0BD8" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="https://scontent.xx.fbcdn.net/v/t1.0-9/18557340_1787441714605994_2635813740526544883_n.jpg?oh=8764d46890efad74e3a96d63ffc25e8d&oe=597A98FA" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="https://scontent.xx.fbcdn.net/v/t1.0-9/18485574_1787441724605993_4431058980475960400_n.jpg?oh=332f646b72c44a438ad39afc1e825bf0&oe=59B41CFB" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 9000);    
+}
+</script>
+<!--Slider部分-->
+    </div>
+
+</div>
+
+<div class="footer">
+  <div class="w3-container">©2017 Fu Jen
+</div><!--(5)-->
+</div>
+
+
+
+
+</body>
+</html>
